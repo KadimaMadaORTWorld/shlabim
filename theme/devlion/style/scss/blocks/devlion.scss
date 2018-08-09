@@ -1,0 +1,48 @@
+.devlion #page{
+  padding: 0 !important;
+  margin-top: 0 !important;
+}
+.devlion #page-footer {
+  margin-top: 0;
+  padding: 0;
+  border-top: none;
+}
+
+.dev-admin {
+  display: inline-block;
+  border-radius: 4px;
+  color: #fff !important;
+  background-color: #03a8e1;
+  padding: 0 5px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  transition: .2s;
+  box-shadow: 5px 5px 5px transparent;
+  cursor: pointer;
+}
+
+.dir-ltr .dev-admin {
+  margin-left: 0px;
+  margin-right: auto;
+}
+.dev-admin:visited  {
+  color: #fff !important;
+}
+.dev-admin:active  {
+  background-color: #7ed6f5;
+}
+.dev-admin:hover  {
+  color: #fff !important;
+  box-shadow: 5px 5px 5px #7d7d7d;
+}
+
+@media #{$desktop-width} {
+  .devlion {
+    position: relative;
+  }
+  .devlion #page {
+    padding-top: 105px !important;
+  }
+}

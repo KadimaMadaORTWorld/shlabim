@@ -1,0 +1,213 @@
+.page-nav__wrapper {
+  position: relative;
+  padding: 10px 0;
+  margin-top: 3px;
+  background-color: $gray_extra_light;
+}
+.page-nav__wrapper::after,
+.page-nav__wrapper::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: $gray_extra_light;
+}
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+.page-nav__wrapper::before {
+  left: auto;
+  right: 0px;
+  z-index: 10;
+}
+
+.page-nav__item {
+  width: 49%;
+  flex-grow: 1;
+  padding: 0 2%;
+  box-sizing: border-box;
+}
+.page-nav__item a {
+  text-align: center;
+  cursor: pointer;
+  display: block;
+}
+.page-nav__item a:hover .page-nav__title{
+  color: $blue_hover;
+}
+.page-nav__item a:hover .page__nav__image--materials {
+  background-image: url('/theme/devlion/img/materials-hover.png');
+}
+.page-nav__item a:hover .page__nav__image--lessons {
+  background-image: url('/theme/devlion/img/lessons-hover.png');
+}
+.page-nav__item a:hover .page__nav__image--around {
+  background-image: url('/theme/devlion/img/around-hover.png');
+}
+.page-nav__item a:hover .page__nav__image--head {
+  background-image: url('/theme/devlion/img/head-hover.png');
+}
+
+.page-nav__item {
+  position: relative;
+
+  // border-left: 1px dotted #6d6e70;
+}
+.page-nav__item::after {
+  content: '';
+  position: absolute;
+  height: 90%;
+  top: 2%;
+  left: 0px;
+  border-left: 2px dotted #6d6e70;
+}
+
+.page-nav__title {
+  display: inline-block;
+  font: $Bold 14px 'Alef';
+  max-height: 16px;
+  overflow-y: hidden;
+  color: #6d6e70;
+  transition: .2s;
+}
+.page__nav__image {
+  width: 50px;
+  height: 50px;
+  margin: 11px auto;
+  margin-bottom: 17px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: .2s;
+}
+
+.page__nav__image--lessons {
+  background-image: url('/theme/devlion/img/lessons.png');
+}
+.page__nav__image--materials {
+  background-image: url('/theme/devlion/img/materials.png');
+}
+.page__nav__image--around {
+  background-image: url('/theme/devlion/img/around.png');
+}
+.page__nav__image--head {
+background-image: url('/theme/devlion/img/head.png');
+}
+
+.page-nav__wrapper .lSAction .lSPrev,
+.page-nav__wrapper .lSAction .lSNext {
+  background: none;
+  width: 10px;
+  height: 10px;
+  left: 9%;
+  border-bottom: 4px solid $blue_hover;
+  border-left: 4px solid $blue_hover;
+  transform: rotate(45deg);
+  opacity: 1;
+  transition: .2s;
+}
+.page-nav__wrapper .lSAction .lSNext {
+  right: 9%;
+  left: auto;
+  transform: rotate(-135deg);
+}
+
+@media #{$tablet-width} {
+  .page-nav__wrapper {
+    padding: 19px 0;
+  }
+  .page-nav__title {
+    font: $Bold 33px "Alef";
+    max-height: 39px;
+  }
+  .page-nav__item {
+    margin-bottom: 21px; // new !!!!
+  }
+  .page__nav__image {
+    width: 100px;
+    height: 100px;
+    padding-top: 21px;
+  }
+  .page-nav__wrapper .lSAction .lSPrev,
+  .page-nav__wrapper .lSAction .lSNext  {
+    left: 3%;
+  }
+  .page-nav__wrapper .lSAction .lSNext {
+    right: 3%;
+    left: auto;
+  }
+
+}
+
+@media #{$desktop-width} {
+  .page-nav__wrapper {
+    margin: 17px 5%;
+    padding: 63px 0;
+    padding-bottom: 8vh;
+    padding-top: 8vh;
+    // margin-top: 60px;
+    margin-top: 2vh;
+
+  }
+  .page-nav__wrapper .lSSlideWrapper {
+    padding-top: 40px;
+  }
+
+  .page-nav__item a  {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-nav__item {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: auto;
+    max-width: 25%;
+    flex-grow: 1;
+    align-items: center;
+    padding: 0px 4%;
+    border: none;
+  }
+  .page-nav__item::after {
+    height: 118%;
+    top: -9%;
+  }
+  .dir-ltr   .page-nav__item {
+    border-left: none;
+  }
+  .page-nav__item:last-child {
+    border: none;
+  }
+  .page__nav__image {
+    flex-shrink: 0;
+    // width: 60px;
+    // height: 60px;
+    padding: 0px;
+    width: 32%;
+    height: 10vh;
+  }
+  .page-nav__title {
+    flex-grow: 1;
+    max-height: 80px;
+    font: 600 18px/20px "Alef";
+    padding: 0 10px;
+  }
+
+  .page-nav__wrapper .lSAction .lSPrev,
+  .page-nav__wrapper .lSAction .lSNext {
+    left: 3%;
+    top: 20px;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid #03a8e1;
+    border-left: 2px solid #03a8e1;
+  }
+  .page-nav__wrapper .lSAction .lSNext {
+    left: 5%;
+    right: auto;
+  }
+
+}

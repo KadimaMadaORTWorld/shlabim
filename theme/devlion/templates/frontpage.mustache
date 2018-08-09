@@ -1,0 +1,278 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_boost/columns2
+
+    Admin time setting template.
+
+    Boost 2 column layout template.
+
+    Context variables required for this template:
+    * sitename - The name of the site
+    * output - The core renderer for the page
+    * bodyattributes - attributes for the body tag as a string of html attributes
+    * sidepreblocks - HTML for the blocks
+    * hasblocks - true if there are blocks on this page
+    * navdraweropen - true if the nav drawer should be open on page load
+    * regionmainsettingsmenu - HTML for the region main settings menu
+    * hasregionmainsettingsmenu - There is a region main settings menu on this page.
+
+    Example context (json):
+    {
+        "sitename": "Moodle",
+        "output": {
+            "doctype": "<!DOCTYPE html>",
+            "page_title": "Test page",
+            "favicon": "favicon.ico",
+            "main_content": "<h1>Headings make html validators happier</h1>"
+         },
+        "bodyattributes":"",
+        "sidepreblocks": "<h2>Blocks html goes here</h2>",
+        "hasblocks":true,
+        "navdraweropen":true,
+        "regionmainsettingsmenu": "",
+        "hasregionmainsettingsmenu": false
+    }
+}}
+{{{ output.doctype }}}
+<html {{{ output.htmlattributes }}}>
+<head>
+    <title>{{{ output.page_title }}}</title>
+    <link rel="shortcut icon" href="{{{ output.favicon }}}" />
+    {{{ output.standard_head_html }}}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/theme/devlion/style/viewScroller.css">
+
+</head>
+
+<body {{{ bodyattributes }}}>
+
+  <div id="page-wrapper" class = "devlion">
+      {{{ output.standard_top_of_body_html }}}
+
+      {{>theme_devlion/header}}
+
+      <!-- <div id="page"> -->
+          <!-- {{{ output.full_header }}} -->
+
+          <!-- <div id="page-content"> -->
+      <div class = "mainbag">
+          <div vs-anchor="view-1" class="mainview">
+
+            <div class = "main-slider">
+              <ul id = "main-slider" class = "main-slider__wrap">
+                {{#mainslider.images}}
+                <li class = "main-slider__item" style = "background-image: url('{{{url}}}')">
+                  <div class = "page-title">
+                    <h2 class = "page-title__header">
+                      {{{description}}}
+                    </h2>
+                  </div>
+                </li>
+                {{/mainslider.images}}
+              </ul>
+              <div class = "main-slider__btn main-slider__btn--pause"></div>
+            </div>
+
+
+            <div class = "page-nav__wrapper">
+              <!-- <div id = "page-nav-slider" class = "page-nav"> -->
+              <div class = "page-nav">
+
+                <div class = "page-nav__item">
+
+                  <a href = "#view-2">
+                    <span class = "page-nav__title">{{#str}}my_courses, theme_devlion{{/str}}</span>
+                    <div class = "page__nav__image page__nav__image--lessons"></div>
+                  </a>
+                </div>
+                <div class = "page-nav__item">
+
+                  <a href = "#view-2">
+                    <span class = "page-nav__title">{{#str}}learning_materials_database, theme_devlion{{/str}}</span>
+                    <div class = "page__nav__image page__nav__image--materials"></div>
+                  </a>
+                </div>
+                <div class = "page-nav__item">
+
+                  <a href = "#view-3">
+                    <span class = "page-nav__title">{{#str}}digital_content_environments, theme_devlion{{/str}}</span>
+                    <div class = "page__nav__image page__nav__image--around"></div>
+                  </a>
+                </div>
+                <div class = "page-nav__item">
+
+                  <a href = "#view-3">
+                    <span class = "page-nav__title">{{#str}}leisure_and_recreation, theme_devlion{{/str}}</span>
+                    <div class = "page__nav__image page__nav__image--head"></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div vs-anchor="view-2" class="mainview mainview__gap">
+
+            {{#courseblocks_enable}}
+            <div class = "unit unit--course" id="slider1">
+              <div class = "unit__wrap">
+                <h3 class = "unit__title"><span>{{#str}}my_courses, theme_devlion{{/str}}</span></h3>
+                <div class = "unit__slider">
+                  <ul class = "unit__slider--lessons">
+
+                    {{#courseblocks}}
+                    <li class = "unit__slider-item">
+                      <a  href="/course/view.php?id={{id}}">
+                        <p  class = "unit__slider-title">{{title}}</p>
+                        <!--<p class = "unit__slider-content">content1</p>-->
+                      </a>
+                    </li>
+                    {{/courseblocks}}
+
+                  </ul>
+                </div>
+                <div id = "unitSliderLessonsNext" class = "unit__arrow-next"></div>
+                <div id = "unitSliderLessonsPrev" class = "unit__arrow-prev"></div>
+              </div>
+            </div>
+            {{/courseblocks_enable}}
+
+            {{{labelblocks1}}}
+
+          </div>
+          <div vs-anchor="view-3" class="mainview mainview__gap flex-block">
+
+              {{{labelblocks2}}}
+              {{{labelblocks3}}}
+
+            <div id="region-main-box" class = "display__none">
+                  {{#hasregionmainsettingsmenu}}
+                  <div id="region-main-settings-menu" class="hidden-print {{#hasblocks}}has-blocks{{/hasblocks}}">
+                      <div> {{{ output.region_main_settings_menu }}} </div>
+                  </div>
+                  {{/hasregionmainsettingsmenu}}
+                  <section id="region-main" {{#hasblocks}}class="has-blocks"{{/hasblocks}}>
+                      <div class="card card-block">
+                      {{#hasregionmainsettingsmenu}}
+                          <div class="region_main_settings_menu_proxy"></div>
+                      {{/hasregionmainsettingsmenu}}
+                      {{{ output.course_content_header }}}
+                      {{{ output.main_content }}}
+                      {{{ output.course_content_footer }}}
+                      </div>
+                  </section>
+                  {{#hasblocks}}
+                  <section data-region="blocks-column" class="hidden-print">
+                      {{{ sidepreblocks }}}
+                  </section>
+                  {{/hasblocks}}
+            </div>
+
+              <!-- </div> id=page-contetn -->
+
+              <!-- </div> id = page -->
+
+            <footer id="page-footer">
+
+              {{>theme_devlion/footer}}
+
+              <!-- <div class="container">
+                <div id="course-footer">{{{ output.course_footer }}}</div>
+
+                {{# output.page_doc_link }}
+                    <p class="helplink">{{{ output.page_doc_link }}}</p>
+                {{/ output.page_doc_link }}
+
+                {{{ output.login_info }}}
+                {{{ output.home_link }}}
+                <nav class="nav navbar-nav hidden-lg-up">
+                    {{# output.custom_menu_flat }}
+                        <ul class="list-unstyled p-t-1">
+                            {{> theme_boost/custom_menu_footer }}
+                        </ul>
+                    {{/ output.custom_menu_flat }}
+                </nav>
+                {{{ output.standard_footer_html }}}
+                {{{ output.standard_end_of_body_html }}}
+              </div> -->
+
+            </footer>
+
+          </div>
+      </div>
+
+  </div>
+  <a href ="#view-1" class = "toTop toTop--frontpage" tabindex= "-1"></a>
+  <div class = "dev-aside">
+    <!-- {{> theme_boost/nav-drawer }} -->
+    {{> theme_devlion/nav-drawer }}
+  </div>
+
+  <script src="/theme/devlion/javascript/viewScroller.min.js"></script>
+  <script>
+    'use strict'
+
+    const initViewScroller = (init = true)  => {
+
+      if (Y.one('body').get('clientWidth')  >= 1150) {
+
+        if(!Y.one('#slider1')) {
+          var dummy = Y.Node.create('<div class="dev-course__dummy"></div>');
+          var slider2 = Y.one('#slider2');
+          var view2 = Y.one('div[vs-anchor="view-2"]');
+          view2.insertBefore(dummy, slider2);
+        }else {
+          Y.all('.dev-course__dummy').remove();
+        }
+
+        $('.mainbag').viewScroller({
+            // useScrollbar: false
+            // changeWhenAnim: false
+        });
+
+      }
+    }
+
+    $(document).ready(function(){
+      initViewScroller();
+
+      if ($(window).width()  < 1150) {
+        var i = 0;
+        $('.page-nav a').each(function(e){
+          i++;
+          $(this).attr('href', `#slider${i}`);
+        });
+
+        $("div.page-nav").on("click","a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href');
+            if (id) {
+              var top = $(id).offset().top;
+              $('body,html').animate({scrollTop: top}, 1200);
+            }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+{{#js}}
+require(['theme_boost/loader']);
+require(['theme_boost/drawer'], function(mod) {
+    mod.init();
+});
+{{/js}}
