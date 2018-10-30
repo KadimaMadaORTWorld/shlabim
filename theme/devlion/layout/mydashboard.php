@@ -44,7 +44,7 @@ $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 //$regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 $languages = devlion_get_languages();
 $main_slider = devlion_get_main_slider();
-$label_blocks = devlion_render_labels_main_course(); // temp sliders
+//$label_blocks = devlion_render_labels_main_course(1); // temp sliders 
 $custom_menu = devlion_render_custom_menu();
 $courseblocks = theme_devlion_courses_list();
 
