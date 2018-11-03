@@ -1,10 +1,12 @@
 .dev-login__form-wrap .push-md-3,
 .dev-login__form-wrap hr,
 .dev-login__form-wrap .card-title,
+.dev-login__form-wrap .card-header,
 .dev-login .loginpanel > h2,
 .dev-login .desc,
 .dev-login .subcontent.guestsub,
 .dev-login .rememberpass,
+.dev-login__form-wrap div[role="main"] .col-md-5:nth-child(2),
 .dev-login__form-wrap div[role="main"] .row:nth-child(4) {
   display: none !important;
 }
@@ -20,6 +22,7 @@ html[lang='he'] #modal-header > h4 {
 .dev-login__form-wrap .push-xl-3,
 .dev-login__form-wrap .push-sm-2,
 .dev-login__form-wrap .m-y-3,
+.dev-login__form-wrap .my-1.my-sm-5,
 .dev-login__form-wrap .m-t-1,
 .dev-login__form-wrap .row {
   margin: 0px !important;
@@ -31,9 +34,18 @@ html[lang='he'] #modal-header > h4 {
   left: auto;
 }
 .dev-login__form-wrap .col-md-4,
+.dev-login__form-wrap .col-xl-6,
 .dev-login__form-wrap .col-sm-8 {
   width: auto;
   float: none;
+}
+.dev-login__form-wrap .col-xl-6.col-sm-8,
+.dev-login__form-wrap .col-xl-6.col-sm-8 .card-body,
+.dev-login__form-wrap .card .col-md-5:first-child {
+  width:100%;
+  padding:0;
+  max-width: 100%;
+  flex: unset;
 }
 .dev-login__form-wrap .col-md-4,
 .dev-login__form-wrap .col-xl-6,
