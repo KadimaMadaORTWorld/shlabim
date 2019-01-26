@@ -62,6 +62,11 @@ if ($categoryid && !$category->visible && !has_capability('moodle/category:viewh
     throw new moodle_exception('unknowncategory');
 }
 
+// CHECK Categories  PERMISSIONS 
+if (($categoryid && !$category->visible && !has_capability('moodle/category:viewhiddencategories', $PAGE->context)) || !has_capability('local/awareness:course', $PAGE->context)) {
+    throw new moodle_exception('unknowncategory');
+}
+
 $PAGE->set_heading($site->fullname);
 $content = $courserenderer->course_category($categoryid);
 
