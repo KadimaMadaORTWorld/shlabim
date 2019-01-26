@@ -1,0 +1,22 @@
+// for template course-not-admin
+.dev-course #region-main.has-blocks{
+  float: none;
+}
+.dev-course {
+  padding: 0 4%;
+
+}
+.dev-course .breadcrumb > li {
+  display: inline-block;
+}
+
+.dev-course .breadcrumb-button .singlebutton {
+  float: left;
+}
+
+.dev-course .breadcrumb {
+  background: none;
+  padding-top: 0px;
+  font: $Bold 14px/14px 'Alef';
+  color: #7e8181;
+}

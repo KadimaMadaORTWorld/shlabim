@@ -1,0 +1,57 @@
+.page-title {
+  position: absolute;
+  top: 32px;
+  width: 100%;
+  padding: 0 10%;
+  box-sizing: border-box;
+  z-index: 9;
+}
+
+.page-title__header {
+  font: $Regular 10px/12px 'Alef';
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.page-title__header > p {
+    margin-top: 5px;
+    padding: 2px 5px;
+    font: $Regular 10px/12px 'Alef';
+    color: rgba(51, 51, 51, 0.8);
+    background-color: rgba(255, 255, 255, .9);
+    word-wrap: break-word;
+  }
+
+@media #{$tablet-width} {
+  .page-title__header {
+    font: $Regular 22px/28px "Alef";
+  }
+  .page-title {
+    top: 126px;
+    padding: 0 16%;
+  }
+  .page-title__header > p {
+    padding: 3px 5px;
+    font: $Regular 22px/28px "Alef";
+  }
+}
+
+@media #{$desktop-width} {
+
+
+  .page-title {
+    padding: 0 6%;
+    padding-left: 56%;
+    top: 7vh;
+  }
+  .dir-ltr .page-title {
+    padding: 0 6%;
+    padding-right: 56%;
+    direction: ltr;
+  }
+  .page-title__header {
+    font: $Regular 20px "Alef";
+  }
+
+}

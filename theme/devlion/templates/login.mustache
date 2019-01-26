@@ -1,0 +1,125 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_devlion/login
+
+    Login page template
+
+    Example context (json):
+    {
+        "output": {
+            "doctype": "<!DOCTYPE html>",
+            "page_title": "Login page",
+            "favicon": "favicon.ico",
+            "main_content": "<h1>Headers keep HTML validators happy</h1>"
+        }
+    }
+}}
+
+{{{ output.doctype }}}
+<html {{{ output.htmlattributes }}}>
+<head>
+    <title>{{{ output.page_title }}}</title>
+    <link rel="shortcut icon" href="{{{ output.favicon }}}" />
+    {{{ output.standard_head_html }}}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+</head>
+
+<body {{{ bodyattributes }}}>
+
+    {{{ output.standard_top_of_body_html }}}
+
+  <div class = "devlion">
+
+      {{>theme_devlion/header}}
+      <!-- Page -->
+
+    <div id = "page">
+      <div id="region-main-box">
+          <section id="region-main" class = "dev-login">
+
+            <p class = "dev-login__title"><span>{{#str}}shlabim, theme_devlion{{/str}} -</span><br><span>{{#str}}eductionhomesickchildren, theme_devlion{{/str}}</span></p>
+            <!-- <p class = "dev-login__title"><span>קמפוס שלבים -</span><br><span>שירותי חינוך לילדים חולים בביתם</span></p> -->
+
+            <div class = "dev-login__wrap">
+              <div class ="dev-login__form">
+                <div class = "dev-login__form-wrap">
+                  <div class = "dev-login__icon"></div>
+                  {{{ output.course_content_header }}}
+                  {{{ output.main_content }}}
+                  {{{ output.course_content_footer }}}
+                  <!-- <button class = "dev-login__btn" type = "button" name = "">הזדהות משרד החינוך</button> -->
+                  <p class = "dev-login__form-text dev-login__form-text--big">{{#str}}didntgetyourusername, theme_devlion{{/str}}</p>
+                  <p class = "dev-login__form-text">{{#str}}techsupport, theme_devlion{{/str}}<span> 073-3729887 </span> | <span> 052-2212277 </span><span> | </span><a href = "mailto:support@km2007.org"> support@km2007.org </a></p>
+                </div>
+              </div>
+
+              <div class = "feedback__wrap">
+                <div class = "feedback">
+                  <div class = "feedback__block">
+                    <p class = "feedback__phone">
+                      <span class = "feedback__phone-number feedback__phone-number--tel">1-800-071-170</span> |
+                      <span class = "feedback__phone-number feedback__phone-number--fax">03-9244493</span>
+                    </p>
+                    <p class = "feedback__text feedback__text--big">{{#str}}phoneservisehourse, theme_devlion{{/str}}</p>
+                    <p class = "feedback__text feedback__text--big">{{#str}}mayleavevoisemessage, theme_devlion{{/str}}<span><a href ="mailto:info@wokm.org"> info@wokm.org </a></span></p>
+                  </div>
+
+                  <div class = "feedback__block">
+                    <p class = "feedback__title">{{#str}}howsubmitreuest, theme_devlion{{/str}}</p>
+                    <p class = "feedback__text feedback__text--big">{{#str}}requestformmustfilled, theme_devlion{{/str}}</p>
+                    <p class = "feedback__text feedback__text--big">{{#str}}requestformmustfilled2, theme_devlion{{/str}}</p>
+                  </div>
+
+                  <div class = "feedback__block feedback__block--arrow">
+                    <a class = "feedback__link" href = "http://www.wokm.org/files/tofesshlabim2019.pdf" target="blank">
+                      <p class = "feedback__title">{{#str}}pressdownloadreuestform, theme_devlion{{/str}}</p>
+                      <p class = "feedback__text feedback__text--big">{{#str}}formmustbescaned, theme_devlion{{/str}}<span><a href="mailto:info@wokm.org"> info@wokm.org </a></span></p>
+                    </a>
+                  </div>
+
+                  <div class = "blank-links blank-links--page">
+                    <a  class = "blank-link blank-link--facebook" target="_blank" href="https://www.facebook.com/WOKMada/"></a>
+                    <a  class = "blank-link blank-link--dog" href="mailto:support@km2007.org"></a>
+                    <a  class = "blank-link blank-link--www" target="_blank" href="http:\\www.wokm.org"></a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+      </div>
+    </div>
+
+    <footer id="page-footer">
+      {{>theme_devlion/footer}}
+      <!-- {{{ output.standard_footer_html }}}
+      {{{ output.standard_end_of_body_html }}} -->
+    </footer>
+
+  </div>
+</body>
+</html>
+
+{{#js}}
+require(['theme_boost/loader'], function () {
+  Breakpoints();
+});
+{{/js}}

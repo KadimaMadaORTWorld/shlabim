@@ -1,0 +1,129 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    Page header.
+}}
+
+<link rel="stylesheet"  href="/theme/devlion/style/development.css?v={{version_css}}">
+<script src="/theme/devlion/javascript/development.js?v={{version_css}}"></script>
+<script src="/theme/devlion/javascript/jquery-3.2.1.min.js"></script>
+<script src="/theme/devlion/javascript/jquery.nicescroll.min.js"></script>
+<script src="/theme/devlion/javascript/lightslider.js"></script>
+<script src="/theme/devlion/javascript/toTop.js"></script>
+<script src="/theme/devlion/javascript/nagishli.js"></script>
+<script src="/theme/devlion/javascript/nagishut.js"></script>
+<script src="/theme/devlion/javascript/slider-engine.js?v={{version_css}}"></script>
+<script src="/theme/devlion/javascript/jquery.mousewheel.min.js"></script>
+
+<header role="banner" class = "dev-header">
+
+  <div class = "header__admin" aria-role="button" title = "{{# str }} site_settings, theme_devlion {{/ str }}" tabindex="0"></div>
+    <!-- <div data-region="drawer-toggle">
+        <button aria-expanded="{{#navdraweropen}}true{{/navdraweropen}}{{^navdraweropen}}false{{/navdraweropen}}" aria-controls="nav-drawer" type="button" class="btn pull-xs-left m-r-1 btn-secondary" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav">{{#pix}}i/menubars{{/pix}}<span class="sr-only">{{#str}}sidepanel, core{{/str}}</span></button>
+    </div> -->
+
+
+  <button class="hamburger hamburger--collapse" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+  <div class = "header__nav">
+    <div class = "header__lang-wrap">
+      <ul>
+        {{#languages}}
+        <li {{{activeclass}}} ><a href = "{{{url}}}">{{langname}}</a></li>
+        {{/languages}}
+      </ul>
+    </div>
+
+    {{{custommenu}}}
+  </div>
+
+  <div class = "header__logo ">
+    <a href = "/">
+      <!-- <div class = "header__logo-wrap">
+        <img src = "/theme/devlion/img/logo_kadima.png" alt = "">
+      </div> -->
+      <div class = "header__logo-wrap header__logo-wrap--big">
+        <img src = "/theme/devlion/img/logo_shlavim.png" alt = "">
+      </div>
+      <!-- <div class = "header__logo-wrap">
+        <img src = "/theme/devlion/img/logo_hinuh.png" alt = "">
+      </div> -->
+    </a>
+  </div>
+
+  <div class = "header__message">
+    <!-- navbar_plugin_output -->
+    {{{ output.navbar_plugin_output }}}
+  </div>
+
+  <div class = "header__user">
+    <!-- user menu  -->
+    {{{ output.user_menu }}}
+  </div>
+
+
+
+
+        <!-- <a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.should_display_navbar_logo }}has-logo{{/ output.should_display_navbar_logo }}
+            {{^ output.should_display_navbar_logo }}
+                hidden-sm-down
+            {{/ output.should_display_navbar_logo }}
+                ">
+            {{# output.should_display_navbar_logo }}
+                <span class="logo hidden-xs-down">
+                    <img src="{{output.get_compact_logo_url}}" alt="{{sitename}}">
+
+                </span>
+            {{/ output.should_display_navbar_logo }}
+            <span class="site-name hidden-sm-down">{{{ sitename }}}</span>
+        </a> -->
+
+
+        <!-- search_box
+        {{{ output.search_box }}} -->
+        <!-- custom_menu -->
+        <!-- {{{ output.custom_menu }}} -->
+        <!-- page_heading_menu -->
+        {{{ output.page_heading_menu }}}
+
+</header>
+{{#js}}
+
+require(['theme_boost/loader']);
+
+require(['jquery','theme_boost/tooltip'], function($, tooltip){
+
+    tooltip.default.Default.placement = 'bottom';
+    tooltip.default.Default.template = '<div class="tooltip" role="tooltip"><div class="tooltip-inner dev-tooltip-inner"></div></div>';
+
+    console.dir(  tooltip);
+
+    $('.header__admin').tooltip();
+    $('.popover-region-notifications .popover-region-toggle').tooltip();
+    $('.popover-region-messages .popover-region-toggle').tooltip();
+});
+
+require(['theme_boost/drawer'], function(mod) {
+
+  mod.init();
+
+});
+
+{{/js}}

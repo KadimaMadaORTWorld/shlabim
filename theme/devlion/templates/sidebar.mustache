@@ -1,0 +1,49 @@
+{{!
+    @template theme_devlion/nav-drawer
+
+
+    Example context (json): {}
+}}
+
+   <div class="site-menubar {{ sidebarcolor }} moodle-has-zindex"> 
+    <div class="site-menubar-body">
+      <div>
+        <ul class="site-menu mt-15" data-plugin="menu">
+          {{# isactivitypage }}
+            {{> theme_devlion/activity_navigation }}
+          {{/ isactivitypage }}
+          
+          {{^ isactivitypage }}
+            {{> theme_devlion/flat_navigation }}
+          {{/ isactivitypage }}
+        </ul>
+      </div>
+    </div>
+    
+    {{# output.check_user_admin_cap }}
+      <div class="site-menubar-footer">
+        <a href="{{config.wwwroot}}/blog/index.php" class="w-p25" data-placement="top" data-toggle="tooltip" data-original-title="{{#str}}siteblog, theme_devlion{{/str}}">
+          <span class="icon fa-comments" aria-hidden="true"></span>
+        </a>
+        <a href="{{config.wwwroot}}/course/edit.php?category=1" class="w-p25" data-placement="top" data-toggle="tooltip" data-original-title="{{#str}}createanewcourse, theme_devlion{{/str}}">
+          <span class="icon wb-file" aria-hidden="true"></span>
+        </a>
+        <a href="{{config.wwwroot}}/course/index.php" class="w-p25" data-placement="top" data-toggle="tooltip" data-original-title="{{#str}}createarchivepage, theme_devlion{{/str}}">
+          <span class="icon wb-book" aria-hidden="true"></span>
+        </a>
+        <a href="{{config.wwwroot}}/admin/settings.php?section=themesettingdevlion" class="fold-show w-p25" data-placement="top" data-toggle="tooltip" data-original-title="{{#str}}devlionsettings, theme_devlion{{/str}}">
+          <span class="icon wb-settings" aria-hidden="true"></span>
+        </a>
+      </div>
+    {{/ output.check_user_admin_cap }}
+    {{^ output.check_user_admin_cap }}
+      <div class="site-menubar-footer">
+        <a href="{{config.wwwroot}}/blog/index.php" class="fold-show w-p50" data-placement="top" data-toggle="tooltip" data-original-title="{{#str}}siteblog, theme_devlion{{/str}}">
+          <span class="icon fa-comments" aria-hidden="true"></span>
+        </a>
+        <a href="{{config.wwwroot}}/course/index.php" class="w-p50" data-placement="top" data-toggle="tooltip" data-original-title="{{#str}}createarchivepage, theme_devlion{{/str}}">
+          <span class="icon wb-book" aria-hidden="true"></span>
+        </a>
+      </div>
+    {{/ output.check_user_admin_cap }}
+  </div>
