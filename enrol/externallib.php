@@ -519,8 +519,8 @@ class core_enrol_external extends external_api {
      * @return array An array of users
      */
     public static function get_potential_users($courseid, $enrolid, $search, $searchanywhere, $page, $perpage) {
-        global $PAGE, $DB, $CFG;
-
+        global $PAGE, $DB, $CFG, $USER;
+	
         require_once($CFG->dirroot.'/enrol/locallib.php');
         require_once($CFG->dirroot.'/user/lib.php');
 
@@ -536,6 +536,7 @@ class core_enrol_external extends external_api {
             )
         );
         $context = context_course::instance($params['courseid']);
+	
         try {
             self::validate_context($context);
         } catch (Exception $e) {
