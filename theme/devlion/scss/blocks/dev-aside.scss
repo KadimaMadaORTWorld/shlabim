@@ -1,0 +1,61 @@
+// boost style
+div[data-region="drawer"] {
+    position: static;
+    padding: 0;
+    width: auto;
+    top: auto;
+    height: auto;
+    overflow-y: auto;
+    background: none;
+}
+
+.dev-aside {
+    background-color: #e9edef;
+    box-sizing: border-box;
+    position: fixed;
+    top: 105px;
+    bottom: 0px;
+    right: -90%;
+    padding: 40px 20px;
+    width: 88%;
+    font: $Regular 26px/40px 'Alef';
+    z-index: 1;
+    overflow-y: auto;
+}
+
+// .dir-ltr .dev-aside {
+//     right: auto;
+//     left: -90%;
+//     border-left: none;
+// }
+.dev-aside a {
+    transition: .2s;
+}
+.dev-aside a:hover {
+    color: $blue_hover;
+}
+
+@media #{$tablet-width} {
+    .dev-aside {
+        top: 180px;
+        width: 58%;
+        right: -60%;
+    }
+    // .dir-ltr .dev-aside {
+    //     left: -60%;
+    // }
+}
+
+@media #{$desktop-width} {
+    .dev-aside {
+        top: 106px;
+        width: 250px;
+        border: none;
+        font: $Regular 20px/30px 'Alef';
+        padding: 20px;
+        .list-group {
+            border-radius: 5px;
+        }
+    }
+
+}

@@ -32,8 +32,6 @@ global $PAGE;
 
 $THEME->name = 'devlion';
 
-$THEME->sheets = array('devlion', 'custom');
-
 $THEME->layouts = [
 
     // The site home page.
@@ -123,8 +121,6 @@ if(isset($PAGE) && $PAGE->user_is_editing()){
         'defaultregion' => 'side-pre',
         'options' => array('nonavbar' => true, 'langmenu' => true),
     );
-
-    // $THEME->layouts = [];
 }
 
 //echo is_siteadmin();exit;
@@ -147,10 +143,15 @@ if(isset($PAGE) && $PAGE->user_is_editing()){
 //
 $THEME->doctype = 'html5';
 $THEME->parents = array('boost');
+// $THEME->sheets = array('custom', 'lightSlider');
 $THEME->sheets = array('custom');
 $THEME->yuicssmodules = array();
 $THEME->enable_dock = true;
 $THEME->editor_sheets = array();
+
+$THEME->scss = function($theme) {
+    return theme_devlion_get_main_scss_content($theme);
+};
 
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->csspostprocess = 'theme_devlion_process_css';

@@ -1,0 +1,62 @@
+// Please do not change style in this file. All change will be automaticaly erased, after gulp builder
+body {
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+#page-wrapper.dev-settings {
+    height: auto;
+}
+
+body.drawer-open-left {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.display__none {
+    display: none !important;
+}
+
+.dock_right_vertical {
+    display: none !important;
+}
+
+.visualy-hidden
+{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.lSPrev:hover,
+.lSNext:hover {
+    border-color: #3d74a0 !important;
+}
+
+#page-wrapper::after {
+    display: none;
+}
+body.lockscroll {
+    position: relative;
+}
+#page-footer {
+    min-height: unset;
+}
+.dev-settings #region-main > .card {
+    overflow-x: unset;
+}
+
+section[data-region="blocks-column"] ,
+a.menu-action[data-title="mymoodle,admin"] ,
+a.menu-action[data-title="grades,grades"] {
+    display: none !important;
+}
+#region-main-settings-menu.has-blocks,
+#region-main.has-blocks,
+#region-main {
+    width: 100% !important;
+}

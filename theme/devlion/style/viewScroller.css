@@ -36,7 +36,7 @@ html {
 
 .mainbag {
     position: relative; /* for any left/right separation */
-    overflow-y: hidden; /* for jQuery scrolls only */
+    /* overflow-y: hidden; /* for jQuery scrolls only */ 
     height: 100%;
     width: 100%; /* if 100% then you can't use left/right separation */
     transition: all 700ms ease 0ms;
@@ -46,7 +46,7 @@ html {
     position: relative;
     height: 100%;
     width: 100%;
-	  font-size: 16px;
+    font-size: 16px;
     vertical-align: bottom;
     white-space: normal;
 }
@@ -65,19 +65,19 @@ html {
     display: inline-block;
     height: 100%;
     width: 100%;
-	font-size: 16px;
+    font-size: 16px;
     vertical-align: bottom;
     white-space: normal;
 }
 
 @media (min-width: 1150px) {
-  /*custom stile */
- .mainview__gap {
-   padding-top: 106px;
-   box-sizing: border-box;
- }
- .flex-block {
-   display: flex;
-   flex-direction: column;
- }
+    /*custom stile */
+    .mainview__gap {
+        padding-top: 106px;
+        box-sizing: border-box;
+    }
+    .flex-block {
+        display: flex;
+        flex-direction: column;
+    }
 }

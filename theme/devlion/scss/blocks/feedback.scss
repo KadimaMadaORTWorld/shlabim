@@ -1,0 +1,168 @@
+.feedback__wrap {
+    background-color: #fff;
+    padding: 24px 5%;
+    margin-top: 24px; // temp
+    text-align: center;
+    padding-top: 0px;
+}
+.feedback__link:focus,
+.feedback__link:visited {
+    text-decoration: none;
+}
+.feedback__block {
+    border-bottom: 1px solid  $text_gray;
+    padding: 20px 0;
+    &--arrow {
+        position: relative;
+        border: none;
+    }
+    &--arrow a {
+        cursor: pointer;
+    }
+    &--arrow::before {
+        display: none;
+        content: '';
+        position: absolute;
+        width: 26px;
+        height: 1px;
+        left: calc(50% - -223px);
+        top: -1px;
+        background: #fdf5f0;
+
+    }
+    &--arrow::after {
+        display: none;
+        content: '';
+        top: -11px;
+        left: calc(50% - -223px);
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        background: url('/theme/devlion/img/arrow_login.jpg') no-repeat center;
+        background-size: contain;
+    }
+}
+
+.feedback__phone-number {
+    display: inline-block;
+    position: relative;
+    color: $text_gray;
+    font: $Regular 11px 'Alef';
+    padding-left: 20px;
+}
+
+.feedback__phone-number::before  {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.feedback__phone-number--fax::before  {
+    background-image: url('/theme/devlion/img/fax.png');
+}
+.feedback__phone-number--tel::before  {
+    background-image: url('/theme/devlion/img/tel.png');
+}
+.feedback__title {
+    color: $text_gray;
+    font: $Bold 11px 'Alef';
+}
+.feedback__text {
+    color: $text_gray;
+    font: $Regular 9px 'Alef';
+    &--big {
+        font: $Regular 9px/10px "Alef";
+    }
+}
+
+@media #{$tablet-width} {
+    .feedback__wrap {
+        margin-top: 32px;
+
+    }
+    .feedback__phone {
+        font-size: 28px;
+        padding-bottom: 10px;
+    }
+    .feedback__phone-number::before {
+        width: 22px;
+    }
+    .feedback__phone-number {
+        font: $Regular 28px "Alef";
+        padding-left: 41px;
+    }
+    .feedback__text {
+        font: $Regular 22px/22px "Alef";
+        padding-top: 0px;
+        &--big {
+            font: $Regular 24px/27px "Alef";
+        }
+    }
+    .feedback__title {
+        font: $Bold 24px/24px "Alef";
+        padding-top: 6px;
+        padding-bottom: 2px;
+    }
+
+
+}
+
+@media #{$desktop-width} {
+    .feedback__block--arrow::after,
+    .feedback__block--arrow::before {
+        display: block;
+    }
+    .feedback__wrap {
+        display: flex;
+        margin-left: 61px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        background-color: rgba(255, 255, 255, .8);
+        flex-grow: 1;
+        padding: 24px 1%;
+        padding-top: 0px;
+    }
+    .feedback {
+        width: 594px;
+        margin: auto;
+    }
+    .feedback__block {
+        padding: 0 0;
+        padding-bottom: 10px;
+    }
+    .feedback__phone {
+        padding-top: 11px;
+        padding-bottom: 0px;
+    }
+    .feedback__phone-number {
+        font: $Regular 18px "Alef";
+    }
+    .feedback__phone-number::before {
+        width: 18px;
+        left: 19px;
+    }
+    .feedback__phone-number--fax::before {
+        left: 0px;
+    }
+    .feedback__phone-number--fax {
+        padding-left: 28px;
+    }
+
+
+    .feedback__text {
+        font: $Regular 16px/16px "Alef";
+        &--big {
+            font: $Regular 16px/18px "Alef";
+            padding-top: 7px;
+        }
+    }
+    .feedback__title {
+        padding-top: 10px;
+        font: $Bold 17px/17px "Alef";
+    }
+}

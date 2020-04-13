@@ -1,0 +1,367 @@
+.dev-login__form-wrap .push-md-3,
+.dev-login__form-wrap hr,
+.dev-login__form-wrap .card-title,
+.dev-login__form-wrap .card-header,
+.dev-login .loginpanel > h2,
+.dev-login .desc,
+.dev-login .subcontent.guestsub,
+.dev-login .rememberpass,
+.dev-login__form-wrap div[role="main"] .col-md-5:nth-child(2),
+.dev-login__form-wrap div[role="main"] .row:nth-child(4) {
+    display: none !important;
+}
+html[lang='he'] #modal-header > h4 {
+    display: none;
+}
+.dev-login #notice {
+    width: auto;
+    background-color: white;
+    z-index: 1;
+}
+//remove boost style
+.dev-login__form-wrap .push-xl-3,
+.dev-login__form-wrap .push-sm-2,
+.dev-login__form-wrap .m-y-3,
+.dev-login__form-wrap .my-1.my-sm-5,
+.dev-login__form-wrap .m-t-1,
+.dev-login__form-wrap .row {
+    margin: 0px !important;
+}
+
+.dev-login__form-wrap  .push-md-1,
+.dev-login__form-wrap  .push-sm-2 {
+    right: auto;
+    left: auto;
+}
+.dev-login__form-wrap .col-md-4,
+.dev-login__form-wrap .col-xl-6,
+.dev-login__form-wrap .col-sm-8 {
+    width: auto;
+    float: none;
+}
+.dev-login__form-wrap .col-xl-6.col-sm-8,
+.dev-login__form-wrap .col-xl-6.col-sm-8 .card-body,
+.dev-login__form-wrap .card .col-md-5:first-child {
+    width:100%;
+    padding:0;
+    max-width: 100%;
+    flex: unset;
+}
+.dev-login__form-wrap .col-md-4,
+.dev-login__form-wrap .col-xl-6,
+.dev-login__form-wrap .col-sm-8,
+.dev-login__form-wrap .card-block {
+    padding: 0;
+}
+.dev-login__form-wrap .card {
+    background: none;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    box-shadow: none;
+}
+.dev-login .alert-danger {
+    display: none;
+}
+.dev-login__error {
+    display: block !important;
+    background: none;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    color: red;
+    text-align: left;
+}
+
+.dev-login .error {
+    color: red  !important;
+    flex-direction: row;
+    padding-right: 78px;
+    display: none;
+}
+
+.dev-login .loginpanel {
+    width: 100% !important;
+}
+.dev-login .signuppanel {
+    display: none !important;
+}
+
+.dev-login .loginbox {
+    margin: 0px;
+}
+.dev-login div[role=main] {
+    margin-bottom: 0px;
+}
+
+.dev-login {
+    float: none !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background: url('/theme/devlion/img/beauty.jpg') 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.dev-login__form {
+    padding: 0 7%;
+    box-sizing: border-box;
+
+}
+.dev-login__form-wrap  form {
+    text-align: left;
+    width: 100%;
+    padding-right: 53px;
+    box-sizing: border-box;
+}
+.dev-login__form-wrap .singlebutton form {
+    padding-right: 0 !important;
+}
+// form style
+.dev-login__form-wrap {
+    position: relative;
+    background: rgba(255, 255, 255, .8);
+    padding: 10px 14px;
+}
+
+.dev-login__icon {
+    position: absolute;
+    top: 6px;
+    right: 19px;
+    width: 36px;
+    height: 36px;
+    background: url('/theme/devlion/img/default_avatar.png') center no-repeat;
+    background-size: contain;
+}
+.dev-login #loginbtn {
+    border: none;
+    width: auto;
+    display: inline-block;
+    color: #fff;
+    font: $Regular 10px/26px 'Alef';
+    background: $blue_hover;
+    border-radius: 0px;
+    margin-top: 12px !important;
+    padding: 0 21px;
+    text-shadow: none;
+    transition: .2s;
+    box-shadow: 3px 3px 8px transparent;
+}
+.dev-login #loginbtn:hover {
+    box-shadow: 3px 3px 8px #545454;
+}
+
+.dev-login .loginform {
+    margin-top: 0px;
+}
+.dev-login .loginbox .loginsub {
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+.dev-login .loginbox .loginform .form-input {
+    width: 100%;
+    padding-right: 53px;
+    box-sizing: border-box;
+}
+
+.dev-login .loginbox .loginform .form-input input {
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 27px;
+    height: auto;
+    border-radius: 0px;
+    margin-bottom: 14px;
+}
+
+.dev-login__form-wrap input,
+.form-control {
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 34px;
+    height: auto;
+    border-radius: 0px;
+    margin-bottom: 14px;
+    padding: 0 5px;
+}
+
+.dev-login__form .form-label {
+    display: none;
+}
+
+.dev-login__title {
+    color: #fff;
+    font: $Bold 16px 'Alef';
+    padding: 8px 10% 3px 6%;
+}
+.dev-login__btn {
+    @include clearfix();
+    float: right;
+    position: relative;
+    background: $orange;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin: 0px;
+    border-radius: 0px;
+    padding: 0 15px 0 15px;
+    text-shadow: none;
+    margin-top: 9px;
+    font: $Regular 10px/26px 'Alef';
+}
+.dev-login__btn:hover {
+    box-shadow: 3px 3px 8px #545454;
+    background: $orange;
+    color: #fff;
+}
+
+.dev-login__form-text {
+    text-align: center;
+    color: $text_gray;
+    font: $Regular 8px 'Alef';
+}
+
+@media #{$tablet-width} {
+    .dev-login__form-wrap form {
+        padding-right: 117px;
+    }
+    .dev-login__form-wrap input, .form-control {
+        font: $Regular 21px/45px 'Alef';
+    }
+    .dev-login__form {
+        padding: 0 10%;
+    }
+    .dev-login__title {
+        font: 600 33px/43px "Alef";
+        padding: 5px 11% 3px 11%;
+    }
+    .dev-login__form-wrap {
+        margin-top: 4px;
+        padding: 10px 4%;
+        padding-top: 24px;
+        padding-right: 3%;
+
+    }
+    .dev-login .loginbox .loginform .form-input {
+        padding-right: 117px;
+    }
+    .dev-login .loginbox .loginform .form-input input {
+        font: $Regular 21px/37px 'Alef';
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+    .dev-login__icon {
+        top: 30px;
+        right: 46px;
+        width: 80px;
+        height: 80px;
+    }
+    .dev-login #loginbtn {
+        margin-top: 28px !important;
+        font: $Regular 20px/34px "Alef";
+        padding: 0 49px;
+    }
+    .dev-login__btn {
+        font: $Regular 20px/34px "Alef";
+        margin-top: 24px;
+        padding: 0 28px 0 28px;
+    }
+    .dev-login__btn::before  {
+        width: 60px;
+        height: 80px;
+        top: -39px;
+        right: 26px;
+    }
+    .dev-login__form-text {
+        font: $Regular 13px/17px "Alef";
+    }
+
+}
+
+@media #{$desktop-width} {
+    .dev-login__form-wrap form {
+        padding-right: 86px;
+    }
+    .dev-login__form-wrap input, .form-control {
+        font: 400 21px/34px "Alef";
+    }
+    .dev-login__wrap {
+        display: flex;
+        padding: 0 4%;
+        height: 35vh;
+        min-height: 263px;
+        padding-bottom: 5px;
+    }
+
+    .dev-login {
+        min-height: calc(100vh - 276px);
+        padding-top: 8vh;
+    }
+    .dev-login__title {
+        font: $Bold 27px/35px "Alef";
+        padding: 2px 4% 10px 4%;
+    }
+    .dev-login__form {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        min-width: 387px;
+        background: rgba(255, 255, 255, 0.8);
+    }
+    .dev-login__form-wrap {
+        box-sizing: border-box;
+        width: 362px;
+        padding: 0px;
+        margin: auto;
+        padding-top: 14px;
+        padding-bottom: 3px;
+        background: none;
+    }
+    .dev-login__icon {
+        top: 17px;
+        right: 9px;
+        width: 60px;
+        height: 60px;
+    }
+    .dev-login .loginbox .loginform .form-input {
+        padding-right: 78px;
+    }
+    .dev-login .loginbox .loginform .form-input input {
+        font: $Regular 17px/17px "Alef";
+    }
+    .dev-login #loginbtn {
+        font: $Regular 16px/29px "Alef";
+        padding: 0 20px;
+        margin-top: 28px;
+    }
+    .dev-login__btn {
+        font: $Regular 16px/29px "Alef";
+        margin-top: 22px;
+        padding: 0px 15px 0 15px;
+    }
+    .dev-login__btn::before {
+        right: 0px;
+    }
+    .dev-login__form-text {
+        padding-top: 4px;
+        &--big {
+            font: $Bold 18px/18px "Alef";
+            padding-top: 15px;
+            text-align: right;
+        }
+    }
+}
+
+@media #{$desktop-width-max} {
+    .dev-login__wrap {
+        width: 1380px;
+        margin: 0 auto;
+    }
+    .dev-login__title {
+        width: 1380px;
+        padding-left: 4%;
+        padding-right: 4%;
+        margin: 0 auto;
+    }
+}

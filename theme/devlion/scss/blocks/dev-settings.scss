@@ -60,8 +60,8 @@
   }
   .block_navigation .block_tree p.hasicon,
   .block_navigation .block_tree .tree_item.branch {
-    padding-right: 10px;
     padding-left: 10px;
+    padding-right: 10px;
   }
 }
 .dir-ltr .dev-settings .tree_item[aria-expanded = 'false']::before {
@@ -99,14 +99,14 @@
       display: flex;
       flex-direction: column;
     }
-    .pull-xs-right {
+    .pull-xs-left {
       order: 2;
-      margin-right: auto;
+      margin-left: auto;
       margin-top: 0px;
     }
-    .pull-xs-left {
+    .pull-xs-right {
       order: 1;
-      padding-right: 30px;
+      padding-left: 30px;
     }
   }
   #page-content .card-block{
@@ -138,11 +138,11 @@
     .inplaceeditable-text {
       line-height: 1.3rem;
     }
-    .mdl-right {
+    .mdl-left {
       padding-top: 15px;
     }
     .section .activity .actions {
-      // left: -39px;
+      // right: -39px;
       // top: 9px;
     }
   }
@@ -159,19 +159,19 @@
 
 .path-course.dir-ltr {
   .dev-settings header {
-    .pull-xs-left {
-      padding-left: 30px;
-      padding-right: inherit;
-    }
     .pull-xs-right {
-      margin-left: auto;
-      margin-right: 21px;
+      padding-right: 30px;
+      padding-left: inherit;
+    }
+    .pull-xs-left {
+      margin-right: auto;
+      margin-left: 21px;
     }
   }
   #page-content div[role='main'] {
     .section .activity .actions {
-      left: auto;
-      right: -39px;
+      right: auto;
+      left: -39px;
     }
   }
 }
@@ -200,7 +200,7 @@
 }
 
 .pagelayout-course .dev-settings .breadcrumb-button .singlebutton {
-  float: left;
+  float: right;
 }
 
 .dev-settings .breadcrumb {
@@ -245,8 +245,8 @@
         height: 40px;
         font-size: 40px;
       }
-      .pull-xs-right {
-        margin-left: 47px;
+      .pull-xs-left {
+        margin-right: 47px;
       }
       .dropdown-toggle::after {
         border-width: .5rem;
@@ -277,7 +277,7 @@
       }
       .actions,
       .section-modchooser-text,
-      .right {
+      .left {
         font-size: 1.4rem;
         font-weight: 400;
       }
@@ -286,20 +286,20 @@
   }
   .path-course.dir-ltr {
     .dev-settings header {
-      .pull-xs-right {
-        margin-right: 65px;
+      .pull-xs-left {
+        margin-left: 65px;
       }
     }
   }
   .dev-settings .breadcrumb {
       font: $Bold 22px/26px 'Alef';
-      padding-right: 51px;
+      padding-left: 51px;
       padding-top: 10px;
     }
 
     .dir-ltr .dev-settings .breadcrumb {
-      padding-right: 0px;
-      padding-left: 51px;
+      padding-left: 0px;
+      padding-right: 51px;
 
     }
     .dev-settings {
@@ -358,17 +358,17 @@
         display: block;
         padding-top: 8px;
       }
-      .pull-xs-right {
-        margin-right: auto;
-        margin-left: 0px;
-      }
       .pull-xs-left {
-        padding-right: 30px;
+        margin-left: auto;
+        margin-right: 0px;
+      }
+      .pull-xs-right {
+        padding-left: 30px;
       }
     }
     #page-content .card-block{
       padding: 0;
-      // padding-left: 8rem;
+      // padding-right: 8rem;
     }
     #page-content div[role='main'] {
       .sectionname {
@@ -389,7 +389,7 @@
       }
       .actions,
       .section-modchooser-text,
-      .right {
+      .left {
         font-size: 1rem;
       }
     }
@@ -399,13 +399,13 @@
 
     .dev-settings .breadcrumb {
       font: $Bold 20px/26px 'Alef';
-      padding-right: 0px;
       padding-left: 0px;
+      padding-right: 0px;
     }
     .pagelayout-course .dev-settings .topics li .sectionname{
       font: $Bold 20px/26px 'Alef';
-      padding-right: 0px;
       padding-left: 0px;
+      padding-right: 0px;
 
     }
 
@@ -414,7 +414,7 @@
     width: 40%;
   }
   .dev-settings .hidden-print {
-    margin-right: 0;
+    margin-left: 0;
     // border: 1px solid rgba(238,238,238,1);
     padding: 1%;
     width: 20%;

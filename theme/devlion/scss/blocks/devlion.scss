@@ -14,7 +14,7 @@
   color: #fff !important;
   background-color: #03a8e1;
   padding: 0 5px;
-  margin-left: auto;
+  margin-right: auto;
   display: flex;
   align-items: center;
   font-size: 20px;
@@ -24,8 +24,8 @@
 }
 
 .dir-ltr .dev-admin {
-  margin-left: 0px;
-  margin-right: auto;
+  margin-right: 0px;
+  margin-left: auto;
 }
 .dev-admin:visited  {
   color: #fff !important;

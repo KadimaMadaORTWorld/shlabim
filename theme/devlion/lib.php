@@ -106,18 +106,6 @@ function theme_devlion_set_logo($css, $logo) {
  * @param array $options
  * @return bool
  */
-//function theme_devlion_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
-//    if ($context->contextlevel == CONTEXT_SYSTEM and ($filearea === 'logo' || $filearea === 'smalllogo')) {
-//        $theme = theme_config::load('devlion');
-//        // By default, theme files must be cache-able by both browsers and proxies.
-//        if (!array_key_exists('cacheability', $options)) {
-//            $options['cacheability'] = 'public';
-//        }
-//        return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
-//    } else {
-//        send_file_not_found();
-//    }
-//}
 
 /**
 * Serves any files associated with the theme settings.
@@ -169,6 +157,25 @@ function theme_devlion_set_customcss($css, $customcss) {
     $css = str_replace($tag, $replacement, $css);
 
     return $css;
+}
+
+/**
+ * Returns the main SCSS content.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return string
+ */
+function theme_devlion_get_main_scss_content($theme) {
+    global $CFG;
+
+    $scss = '';
+
+    // Include css styles form boost.
+    //$scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/plain.scss');
+    // Include styles form theme_petel.
+    $scss .= file_get_contents($CFG->dirroot . '/theme/devlion/scss/main.scss');
+
+    return $scss;
 }
 
 /**

@@ -18,7 +18,8 @@
     Page header.
 }}
 
-<link rel="stylesheet"  href="/theme/devlion/style/development.css?v={{version_css}}">
+<!-- <link rel="stylesheet"  href="/theme/devlion/style/development.css?v={{version_css}}"> -->
+<link rel="stylesheet"  href="/theme/devlion/style/lightSlider.css?v={{version_css}}">
 <script src="/theme/devlion/javascript/development.js?v={{version_css}}"></script>
 <script src="/theme/devlion/javascript/jquery-3.2.1.min.js"></script>
 <script src="/theme/devlion/javascript/jquery.nicescroll.min.js"></script>
@@ -110,8 +111,8 @@ require(['theme_boost/loader']);
 
 require(['jquery','theme_boost/tooltip'], function($, tooltip){
 
-    tooltip.default.Default.placement = 'bottom';
-    tooltip.default.Default.template = '<div class="tooltip" role="tooltip"><div class="tooltip-inner dev-tooltip-inner"></div></div>';
+    tooltip.Default.placement = 'bottom';
+    tooltip.Default.template = '<div class="tooltip" role="tooltip"><div class="tooltip-inner dev-tooltip-inner"></div></div>';
 
     console.dir(  tooltip);
 
@@ -121,9 +122,7 @@ require(['jquery','theme_boost/tooltip'], function($, tooltip){
 });
 
 require(['theme_boost/drawer'], function(mod) {
-
   mod.init();
-
 });
 
 {{/js}}

@@ -33,6 +33,6 @@ defined('MOODLE_INTERNAL') || die;
 $plugin->version   = 2017051501;
 $plugin->requires  = 2017050500;
 $plugin->component = 'theme_devlion';
-$plugin->dependencies = array(
-    'theme_bootstrapbase'  => 2017050500,
-);
+// $plugin->dependencies = array(
+//     'theme_bootstrapbase'  => 2017050500,
+// );

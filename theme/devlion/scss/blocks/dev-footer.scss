@@ -5,8 +5,8 @@
 .dev-footer::before {
   content: '';
   top: -12px;
-  left: 0;
   right: 0;
+  left: 0;
   width: 100%;
   height: 8px;
   background-color: #808184;
@@ -34,11 +34,11 @@
   color: inherit !important;
 }
 .dev-footer__logo {
-  margin-right: auto;
+  margin-left: auto;
 }
 .dir-ltr .dev-footer__logo {
-  margin-left: auto;
-  margin-right: 0;
+  margin-right: auto;
+  margin-left: 0;
 }
 .dev-footer__logo-wrap {
   width: 46px;
@@ -61,11 +61,11 @@
 @media #{$desktop-width} {
 
   .dev-footer__logo {
-    margin-right: 57px;
+    margin-left: 57px;
   }
   .dir-ltr .dev-footer__logo {
-    margin-left: 57px;
-    margin-right: 0;
+    margin-right: 57px;
+    margin-left: 0;
   }
   .dev-footer__logo-wrap {
     width: 69px;

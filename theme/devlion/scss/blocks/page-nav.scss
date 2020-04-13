@@ -8,7 +8,7 @@
 .page-nav__wrapper::before {
   content: '';
   position: absolute;
-  left: 0px;
+  right: 0px;
   top: 0;
   bottom: 0;
   width: 2px;
@@ -19,8 +19,8 @@
   flex-wrap: wrap;
 }
 .page-nav__wrapper::before {
-  left: auto;
-  right: 0px;
+  right: auto;
+  left: 0px;
   z-index: 10;
 }
 
@@ -54,15 +54,15 @@
 .page-nav__item {
   position: relative;
 
-  // border-left: 1px dotted #6d6e70;
+  // border-right: 1px dotted #6d6e70;
 }
 .page-nav__item::after {
   content: '';
   position: absolute;
   height: 90%;
   top: 2%;
-  left: 0px;
-  border-left: 2px dotted #6d6e70;
+  right: 0px;
+  border-right: 2px dotted #6d6e70;
 }
 
 .page-nav__title {
@@ -102,16 +102,16 @@ background-image: url('/theme/devlion/img/head.png');
   background: none;
   width: 10px;
   height: 10px;
-  left: 9%;
+  right: 9%;
   border-bottom: 4px solid $blue_hover;
-  border-left: 4px solid $blue_hover;
+  border-right: 4px solid $blue_hover;
   transform: rotate(45deg);
   opacity: 1;
   transition: .2s;
 }
 .page-nav__wrapper .lSAction .lSNext {
-  right: 9%;
-  left: auto;
+  left: 9%;
+  right: auto;
   transform: rotate(-135deg);
 }
 
@@ -133,11 +133,11 @@ background-image: url('/theme/devlion/img/head.png');
   }
   .page-nav__wrapper .lSAction .lSPrev,
   .page-nav__wrapper .lSAction .lSNext  {
-    left: 3%;
+    right: 3%;
   }
   .page-nav__wrapper .lSAction .lSNext {
-    right: 3%;
-    left: auto;
+    left: 3%;
+    right: auto;
   }
 
 }
@@ -176,7 +176,7 @@ background-image: url('/theme/devlion/img/head.png');
     top: -9%;
   }
   .dir-ltr   .page-nav__item {
-    border-left: none;
+    border-right: none;
   }
   .page-nav__item:last-child {
     border: none;
@@ -198,16 +198,16 @@ background-image: url('/theme/devlion/img/head.png');
 
   .page-nav__wrapper .lSAction .lSPrev,
   .page-nav__wrapper .lSAction .lSNext {
-    left: 3%;
+    right: 3%;
     top: 20px;
     width: 6px;
     height: 6px;
     border-bottom: 2px solid #03a8e1;
-    border-left: 2px solid #03a8e1;
+    border-right: 2px solid #03a8e1;
   }
   .page-nav__wrapper .lSAction .lSNext {
-    left: 5%;
-    right: auto;
+    right: 5%;
+    left: auto;
   }
 
 }

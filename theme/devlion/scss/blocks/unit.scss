@@ -26,8 +26,8 @@
   background-color: $gray_extra_light;
 }
 .unit__slider {
-  padding-left: 15%;
   padding-right: 15%;
+  padding-left: 15%;
 }
 .unit__arrow-next,
 .unit__arrow-prev {
@@ -38,15 +38,15 @@
     z-index: 99;
     width: 10px;
     height: 10px;
-    left: 9%;
+    right: 9%;
     border-bottom: 4px solid #03a8e1;
-    border-left: 4px solid #03a8e1;
+    border-right: 4px solid #03a8e1;
     transform: rotate(45deg);
     transition: .2s;
 }
 .unit__arrow-next {
-  right: 9%;
-  left: auto;
+  left: 9%;
+  right: auto;
   transform: rotate(-135deg);
 }
 
@@ -150,16 +150,16 @@
   background: none;
   width: 10px;
   height: 10px;
-  left: 9%;
+  right: 9%;
   border-bottom: 4px solid $blue_hover;
-  border-left: 4px solid $blue_hover;
+  border-right: 4px solid $blue_hover;
   transform: rotate(45deg);
   opacity: 1;
   transition: .2s;
 }
 .unit__slider .lSAction .lSNext {
-  right: 9%;
-  left: auto;
+  left: 9%;
+  right: auto;
   transform: rotate(-135deg);
 }
 .unit__slider-item > a  {
@@ -202,7 +202,7 @@
   .unit__wrap::before {
     content: '';
     position: absolute;
-    left: 7%;
+    right: 7%;
     top:70px;
     bottom: 0;
     width: 20px;
@@ -211,8 +211,8 @@
   }
 
   .unit__wrap::after {
-    left: auto;
-    right: 7%;
+    right: auto;
+    left: 7%;
   }
   .unit {
     margin-top: 14px;
@@ -229,8 +229,8 @@
   }
 
   .unit__slider {
-    padding-right: 8%;
     padding-left: 8%;
+    padding-right: 8%;
   }
   .unit__slider--lessons {
       padding: 20px 0 !important;
@@ -290,8 +290,8 @@
   }
   .unit--additions .unit__slider-title,
   .unit--options .unit__slider-title {
-    padding-left: 10px;
     padding-right: 10px;
+    padding-left: 10px;
     max-height: 130px;
   }
   .unit__slider-item {
@@ -304,10 +304,10 @@
   .unit__slider--options .unit__slider-item::after {
     content: '';
     position: absolute;
-    left: 0;
+    right: 0;
     top:25%;
     bottom: 25%;
-    border-left: 2px dotted #6d6e70;
+    border-right: 2px dotted #6d6e70;
   }
 
   .unit__wrapper .unit__slider-item::after,
@@ -338,13 +338,13 @@
   .unit__arrow-prev,
   .unit__slider .lSAction .lSPrev,
   .unit__slider .lSAction .lSNext  {
-    left: 4%;
+    right: 4%;
     top: 55%;
   }
   .unit__arrow-next,
   .unit__slider .lSAction .lSNext {
-    right: 4%;
-    left: auto;
+    left: 4%;
+    right: auto;
   }
   .unit__title--lessons {
     font: $Bold 22px/50px "Alef";
@@ -396,8 +396,8 @@
   }
 
   .unit__slider {
-    padding-right: 0px;
     padding-left: 0px;
+    padding-right: 0px;
   }
 
   .unit--materials-middle .unit__slider-item,
@@ -430,17 +430,17 @@
   }
   .unit__wrap {
     position: relative;
-    padding-right: 56px;
-    padding-left: 18px;
+    padding-left: 56px;
+    padding-right: 18px;
   }
   .dir-ltr .unit__wrap {
-    padding-right: 18px;
-    padding-left: 56px;
+    padding-left: 18px;
+    padding-right: 56px;
   }
 
   .unit__wrap::after,
   .unit__wrap::before {
-    right: 3%;
+    left: 3%;
     top:37px;
     bottom: 0;
     width: 3%;
@@ -449,13 +449,13 @@
   .unit__wrap::after {
     // width: 6px;
     width: 22px;
-    right: auto;
-    left: 17px;
+    left: auto;
+    right: 17px;
     top: 38px;
   }
 
   .dir-ltr .unit__wrap::before {
-    left: 2%;
+    right: 2%;
   }
 
   .unit .lSSlideWrapper.usingCss {
@@ -485,12 +485,12 @@
     font: 400 22px/37px "Alef";
     position: absolute;
     top: 1vh;
-    right: 42px;
+    left: 42px;
     padding-top: 0px;
   }
   .dir-ltr .unit__note {
-    right: auto;
-    left: 42px;
+    left: auto;
+    right: 42px;
   }
   .unit__slider-title {
     font-size: 20px;
@@ -515,10 +515,10 @@
   .unit__slider-item::after {
     content: '';
     position: absolute;
-    left: 0;
+    right: 0;
     top:0px;
     bottom: 18%;
-    border-left: 2px dotted #6d6e70;
+    border-right: 2px dotted #6d6e70;
   }
   .unit--additions .unit__slider-item::after {
     bottom: 0;
@@ -530,14 +530,14 @@
       top:30px;
   }
   .dir-ltr .unit__cont .unit__slider-item::after {
-    left: auto;
-    right: 0px;
+    right: auto;
+    left: 0px;
   }
 
   .unit__title {
     position: absolute;
     top: 0px;
-    right: 0;
+    left: 0;
     bottom: 0;
     width: 34px;
     text-align: center;
@@ -545,15 +545,15 @@
     z-index: 10;
   }
   .dir-ltr .unit__title {
-    right: auto;
-    left: 0px;
+    left: auto;
+    right: 0px;
   }
   .unit__wrapper .unit__title {
-    right: 5%;
+    left: 5%;
   }
   .dir-ltr .unit__wrapper .unit__title {
-    right: auto;
-    left: 5%;
+    left: auto;
+    right: 5%;
   }
 
   .unit--materials-hight  .unit__slider-title,
@@ -579,28 +579,28 @@
   .unit__arrow-prev,
   .unit__slider .lSAction .lSPrev,
   .unit__slider .lSAction .lSNext {
-    left: 2%;
+    right: 2%;
     top: 2.5vh;
     width: 8px;
     height: 8px;
     border-bottom: 3px solid #03a8e1;
-    border-left: 3px solid #03a8e1;
+    border-right: 3px solid #03a8e1;
   }
   .unit__arrow-next,
   .unit__slider .lSAction .lSNext {
-    left: 4%;
-    right: auto;
+    right: 4%;
+    left: auto;
   }
 
   .dir-ltr .unit__arrow-prev,
   .dir-ltr  .unit__slider .lSAction .lSPrev {
-    left: auto;
-    right: 3%
+    right: auto;
+    left: 3%
   }
   .dir-ltr .unit__arrow-next,
   .dir-ltr .unit__slider .lSAction .lSNext {
-    left: auto;
-    right: 1%
+    right: auto;
+    left: 1%
   }
 
 

@@ -1,0 +1,28 @@
+@mixin container () {
+    padding: 0 3%;
+    @media #{$tablet-width} {
+        padding: 0 5%;
+    }
+    @media #{$desktop-width} {
+        padding: 0 5%;
+    }
+}
+
+@mixin visualy-hidden () {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+@mixin clearfix () {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
